@@ -68,16 +68,3 @@
   position: relative;
   z-index: 1;
 }
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.logo {
-  width: 60px;
-  height: auto;
-  border-radius: 50%;
-}
