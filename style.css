@@ -126,3 +126,32 @@ footer {
     align-items: center;
   }
 }
+
+#menu {
+  background-color: #fff0f5;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.menu-images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.menu-images img:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .menu-images {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .menu-images img {
+    width: 100%;
+  }
+}
