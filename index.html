@@ -5,45 +5,175 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="Gold Nails Spa">
   <meta name="description" content="Experience luxurious nail care and spa services in Victorville. Book your appointment today at The Gold Nails Spa.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/d/df/%D0%9F%D1%80%D0%BE%D1%84%D0%B5%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D0%BD%D0%B0_%D0%9D%D0%BE%D0%BA%D1%82%D0%BE%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BA%D0%B0.JPG">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💅</text></svg>">
   <title>Gold Nails & Spa</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="special-banner">
+    🎉 Walk-ins Welcome!
+  </div>
+
   <header>
+    <div class="trust-badges">
+      <div class="trust-badge">🛡️ Licensed & Insured</div>
+      <div class="trust-badge">⭐ 4.4/5 Google Rating</div>
+    </div>
     <h1>Gold Nails & Spa</h1>
-    <nav>
+    <nav class="desktop-nav" role="navigation" aria-label="Main navigation">
       <a href="#home">Home</a>
+      <a href="#gallery">Gallery</a>
       <a href="#services">Services</a>
+      <a href="#staff">Our Team</a>
       <a href="#menu">Menu</a>
+      <a href="#policies">Policies</a>
+      <a href="#testimonials">Reviews</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button id="hamburger" aria-label="Open mobile navigation menu">☰</button>
+    <nav id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+      <div class="mobile-nav-content">
+        <div class="mobile-nav-header">
+          <h2>Gold Nails & Spa</h2>
+          <p>Your Beauty Destination</p>
+        </div>
+        
+        <div class="nav-section">
+          <h3>Navigate</h3>
+          <div class="nav-links">
+            <a href="#home">🏠 Home</a>
+            <a href="#gallery">📸 Gallery</a>
+            <a href="#services">💅 Services</a>
+            <a href="#staff">👥 Our Team</a>
+            <a href="#menu">📋 Menu & Prices</a>
+            <a href="#policies">📜 Policies</a>
+            <a href="#testimonials">⭐ Reviews</a>
+            <a href="#contact">📍 Contact</a>
+          </div>
+        </div>
+
+        <div class="nav-section">
+          <h3>Quick Actions</h3>
+          <div class="nav-links">
+            <a href="tel:+17608813001">📞 Call Now</a>
+            <a href="https://calendly.com/goldnailsandspa-vv" target="_blank">📅 Book Online</a>
+            <a href="mailto:goldnailsandspa.vv@gmail.com">✉️ Email Us</a>
+          </div>
+        </div>
+
+        <div class="nav-section">
+          <h3>Follow Us</h3>
+          <div class="nav-links">
+            <a href="https://www.facebook.com/GoldNailsAndSpa" target="_blank" rel="noopener">📘 Facebook</a>
+            <a href="https://www.instagram.com/GoldNailsAndSpa" target="_blank" rel="noopener">📷 Instagram</a>
+            <a href="https://www.google.com/maps/place/14519+7th+St,+Victorville,+CA+92395" target="_blank" rel="noopener">🗺️ Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </nav>
   </header>
+
+  <div class="wait-time" aria-live="polite">
+    <h4>Current Wait</h4>
+    <div class="wait-time-value" id="wait-time-display">15-20 min</div>
+  </div>
 
   <section id="home" class="hero">
     <div class="hero-overlay">
       <h2>Beauty Starts Here</h2>
-      <p>Pamper yourself at Victorville’s top nail and spa destination</p>
-      <button onclick="window.open('https://calendly.com/goldnailsandspa-vv', '_blank')">Book Now</button>
+      <p>Pamper yourself at Victorville's top nail and spa destination</p>
+      <div class="cta-buttons">
+        <a href="https://calendly.com/goldnailsandspa-vv" target="_blank" class="cta-button">Book Now</a>
+        <a href="tel:+17608813001" class="cta-button secondary">Call Us</a>
+      </div>
     </div>
   </section>
 
+  <section id="gallery">
+    <div class="container">
+      <h2>Our Work Gallery</h2>
+      <p>Browse our latest nail art, spa treatments, and salon atmosphere</p>
+      <div class="gallery-grid">
+        <div class="gallery-item" tabindex="0" aria-label="Nail Art Designs">
+          <img src="nail_art_1.jpg" alt="Beautiful nail art designs with intricate patterns" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-text">Nail Art<br>Designs</div>
+          </div>
+        </div>
+        <div class="gallery-item" tabindex="0" aria-label="Manicure Results">
+          <img src="nail_art_2.jpg" alt="Beautiful nail art designs with intricate patterns" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-text">Nail Art<br>Results</div>
+          </div>
+        </div>
+        <div class="gallery-item" tabindex="0" aria-label="Pedicure Station">
+          <img src="nail_art_3.jpg" alt="Beautiful nail art designs with intricate patterns" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-text">Nail Art<br>Station</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="services">
-    <h2>Our Services</h2>
-    <div class="services-list">
-      <div class="service">
-        <h3>Manicure</h3>
-        <p>Classic, Gel, and Deluxe options available.</p>
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-list">
+        <div class="service">
+          <h3>Manicure</h3>
+          <p>Classic, Paraffin, and Gold options available. Professional nail care with attention to detail and the finest products.</p>
+          <div class="service-duration">30-45 min</div>
+        </div>
+        <div class="service">
+          <h3>Pedicure</h3>
+          <p>Relaxing pedicures with massage and polish. From classic treatments to luxurious spa experiences.</p>
+          <div class="service-duration">45-75 min</div>
+        </div>
+        <div class="service">
+          <h3>Nail Art</h3>
+          <p>Custom designs for every style and occasion. Express your personality with our creative nail artistry.</p>
+          <div class="service-duration">15-30 min</div>
+        </div>
+        <div class="service">
+          <h3>Eyelash Extensions</h3>
+          <p>Professional lash application for fuller, longer lashes. Classic, Hybrid, and Volume options available.</p>
+          <div class="service-duration">90-120 min</div>
+        </div>
+        <div class="service">
+          <h3>Waxing Services</h3>
+          <p>Professional hair removal services for face and body. Quick, efficient, and comfortable treatments.</p>
+          <div class="service-duration">15-60 min</div>
+        </div>
       </div>
-      <div class="service">
-        <h3>Pedicure</h3>
-        <p>Relaxing pedicures with massage and polish.</p>
-      </div>
-      <div class="service">
-        <h3>Nail Art</h3>
-        <p>Custom designs for every style and occasion.</p>
+    </div>
+  </section>
+
+  <section id="staff">
+    <div class="container">
+      <h2>Meet Our Expert Team</h2>
+      <p>Our licensed professionals are here to make you look and feel your best</p>
+      <div class="staff-grid">
+        <div class="staff-member">
+          <div class="staff-photo">👨</div>
+          <div class="staff-name">Danny</div>
+          <div class="staff-title">Business Owner & Nail Technician</div>
+          <div class="staff-certs">
+            <span class="cert-badge">Licensed Nail Tech</span>
+            <span class="cert-badge">Gel Specialist</span>
+            <span class="cert-badge">15+ Years Experience</span>
+          </div>
+        </div>
+        <div class="staff-member">
+          <div class="staff-photo">👩</div>
+          <div class="staff-name">Wendy</div>
+          <div class="staff-title">Nail Artist & Pedicure Specialist</div>
+          <div class="staff-certs">
+            <span class="cert-badge">Licensed Nail Tech</span>
+            <span class="cert-badge">Nail Art Certified</span>
+            <span class="cert-badge">15+ Years Experience</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -51,33 +181,328 @@
   <section id="menu">
     <div class="container">
       <h2>Our Full Menu</h2>
-      <div class="menu-images">
-        <img src="Menu-Front.jpg" alt="Menu Page 1" />
-        <img src="Menu-Back.jpg" alt="Menu Page 2" />
+      <div class="menu-section">
+        <!-- Nail Enhancements -->
+        <div class="menu-category">
+          <h3>Nail Enhancements</h3>
+          <ul>
+            <li><span>Full Set</span><span>$51+</span></li>
+            <li class="service-time">Approx. 60-75 minutes</li>
+            <li><span>White Tip Full Set</span><span>$46+</span></li>
+            <li class="service-time">Approx. 60-75 minutes</li>
+            <li><span>Pink & White Full Set</span><span>$56+</span></li>
+            <li class="service-time">Approx. 75-90 minutes</li>
+            <li><span>Ombre Full Set</span><span>$56+</span></li>
+            <li class="service-time">Approx. 75-90 minutes</li>
+            <li><span>Hard Gel</span><span>$46+</span></li>
+            <li class="service-time">Approx. 60-75 minutes</li>
+            <li><span>Hard Gel Fill</span><span>$41+</span></li>
+            <li class="service-time">Approx. 45-60 minutes</li>
+            <li><span>Fill</span><span>$36+</span></li>
+            <li class="service-time">Approx. 45-60 minutes</li>
+            <li><span>Gel X</span><span>$56+</span></li>
+            <li class="service-time">Approx. 60-75 minutes</li>
+            <li><span>Gel X Fill</span><span>$46+</span></li>
+            <li class="service-time">Approx. 45-60 minutes</li>
+            <li><em>* We charge extra for shape and length</em></li>
+          </ul>
+        </div>
+
+        <!-- Extra Services -->
+        <div class="menu-category">
+          <h3>Extra Services</h3>
+          <ul>
+            <li><span>Gel Polish</span><span>$10+</span></li>
+            <li><span>Cut Down</span><span>$6+</span></li>
+            <li><span>Nail Art</span><span>$7+</span></li>
+            <li><span>French</span><span>$7+</span></li>
+            <li><span>Nail Repair</span><span>$5</span></li>
+            <li><span>Cuticle Cutting</span><span>$10</span></li>
+            <li><span>Buff Shine</span><span>$10</span></li>
+            <li><span>Acrylic Soak-Off</span><span>$16</span></li>
+            <li><span>Polish Change Hands</span><span>$11</span></li>
+            <li><span>Polish Change Feet</span><span>$12</span></li>
+            <li><span>Deep French Tip / V-Line</span><span>$15</span></li>
+            <li><span>Take Off w/ Gel Service</span><span>$5 extra</span></li>
+            <li><span>Take Off w/o Gel Service</span><span>$16</span></li>
+            <li><span>Gel Polish Change Hands</span><span>$21</span></li>
+            <li><span>Gel Polish Change Feet</span><span>$26</span></li>
+            <li><span>Gel Polish on Acrylic</span><span>$26</span></li>
+          </ul>
+        </div>
+
+        <!-- Manicures -->
+        <div class="menu-category">
+          <h3>Manicures</h3>
+          <ul>
+            <li><span><strong>1. Classic Spa</strong></span><span>$26</span></li>
+            <li>Includes nail trimming, shaping, cuticle grooming, and polish.</li>
+            <li class="service-time">Duration: 30-40 minutes</li>
+            <li><span><strong>2. Paraffin</strong></span><span>$36</span></li>
+            <li>Includes grooming, buffing, paraffin wax, and polish.</li>
+            <li class="service-time">Duration: 40-50 minutes</li>
+            <li><span><strong>3. Gold</strong></span><span>$41</span></li>
+            <li>Includes grooming, paraffin wax, 5-min massage, hot stone, and polish.</li>
+            <li class="service-time">Duration: 45-55 minutes</li>
+          </ul>
+          <p><strong>Extras:</strong> Hot Stone $10, Paraffin $10, Gel Polish $10, Callus Removal $10, Gel Remover $5</p>
+        </div>
+
+        <!-- Dipping Powder -->
+        <div class="menu-category">
+          <h3>Dipping Powder</h3>
+          <ul>
+            <li><span>Full Set on Natural Nails</span><span>$46+</span></li>
+            <li class="service-time">Duration: 60-75 minutes</li>
+            <li><span>Take Off + Full Set</span><span>$51+</span></li>
+            <li class="service-time">Duration: 75-90 minutes</li>
+            <li><span>Pink & White Full Set</span><span>$56+</span></li>
+            <li class="service-time">Duration: 75-90 minutes</li>
+            <li><span>Ombre Full Set</span><span>$61+</span></li>
+            <li class="service-time">Duration: 80-95 minutes</li>
+            <li><em>* We charge extra for shape and length</em></li>
+          </ul>
+        </div>
+
+        <!-- Pedicures -->
+        <div class="menu-category">
+          <h3>Pedicures</h3>
+          <ul>
+            <li><span><strong>1. Classic</strong></span><span>$31</span></li>
+            <li>Includes soap soak, grooming, massage, towel, and polish.</li>
+            <li class="service-time">Duration: 45-55 minutes</li>
+            <li><span><strong>2. Deluxe</strong></span><span>$41</span></li>
+            <li>Includes Bubble Salt, Scrub, Mask, 3-min massage.</li>
+            <li class="service-time">Duration: 55-65 minutes</li>
+            <li><span><strong>3. Callus</strong></span><span>$46</span></li>
+            <li>Includes Callus Removal, paraffin wax, 5-min massage, polish.</li>
+            <li class="service-time">Duration: 60-70 minutes</li>
+            <li><span><strong>4. Volcano</strong></span><span>$61</span></li>
+            <li>Includes Volcano Detox, Scrub, Mask, Towels, Paraffin, Hot Stones.</li>
+            <li class="service-time">Duration: 70-80 minutes</li>
+            <li><span><strong>5. Gold</strong></span><span>$76</span></li>
+            <li>Includes Callus Removal, Gold Soak, Mud Mask, 10-min hot oil massage, polish.</li>
+            <li class="service-time">Duration: 75-85 minutes</li>
+          </ul>
+        </div>
+
+        <!-- Kids Services -->
+        <div class="menu-category">
+          <h3>Kid's Services <small>(Under 10)</small></h3>
+          <ul>
+            <li><span>Pedicure</span><span>$26</span></li>
+            <li class="service-time">Duration: 30-40 minutes</li>
+            <li><span>Manicure</span><span>$21</span></li>
+            <li class="service-time">Duration: 20-30 minutes</li>
+            <li><span>Polish Change</span><span>$11</span></li>
+            <li class="service-time">Duration: 15-20 minutes</li>
+            <li><span>Gel Polish Change</span><span>$16</span></li>
+            <li class="service-time">Duration: 20-25 minutes</li>
+          </ul>
+        </div>
+
+        <!-- Eyelash Extensions -->
+        <div class="menu-category">
+          <h3>Beauty Care – Eyelash Extensions</h3>
+          <ul>
+            <li><span>Classic Full Set</span><span>$100</span></li>
+            <li class="service-time">Duration: 90-120 minutes</li>
+            <li><span>Refills (Classic)</span><span>$60+</span></li>
+            <li class="service-time">Duration: 60-90 minutes</li>
+            <li><span>Hybrid Full Set</span><span>$120</span></li>
+            <li class="service-time">Duration: 105-135 minutes</li>
+            <li><span>Refills (Hybrid)</span><span>$70+</span></li>
+            <li class="service-time">Duration: 75-105 minutes</li>
+            <li><span>Volume Full Set</span><span>$150</span></li>
+            <li class="service-time">Duration: 120-150 minutes</li>
+            <li><span>Refills (Volume)</span><span>$75+</span></li>
+            <li class="service-time">Duration: 90-120 minutes</li>
+          </ul>
+        </div>
+
+        <!-- Waxing -->
+        <div class="menu-category">
+          <h3>Waxing Services</h3>
+          <ul>
+            <li><span>Eyebrows</span><span>$12</span></li>
+            <li><span>Lips</span><span>$8</span></li>
+            <li><span>Chin</span><span>$12</span></li>
+            <li><span>Eyebrow + Lip + Chin</span><span>$30</span></li>
+            <li><span>Forehead</span><span>$12</span></li>
+            <li><span>Sideburn</span><span>$12</span></li>
+            <li><span>Half Face</span><span>$35</span></li>
+            <li><span>Full Face</span><span>$45</span></li>
+            <li><span>Half Arm</span><span>$25+</span></li>
+            <li><span>Full Arm</span><span>$35</span></li>
+            <li><span>Under Arm</span><span>$15</span></li>
+            <li><span>Half Leg</span><span>$35</span></li>
+            <li><span>Full Leg</span><span>$45</span></li>
+            <li><span>Chest</span><span>$35</span></li>
+            <li><span>Half Back</span><span>$40</span></li>
+            <li><span>Full Back</span><span>$50+</span></li>
+            <li><span>Bikini</span><span>$41</span></li>
+            <li><span>Brazilian</span><span>$60</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="policies">
+    <div class="container">
+      <h2>Policies & Information</h2>
+      <div class="policies-grid">
+        <div class="policy-card">
+          <h3>📅 Booking & Appointments</h3>
+          <ul>
+            <li>Online booking available 24/7</li>
+            <li>Walk-ins welcome</li>
+            <li>Group bookings available for 4+ people</li>
+            <li>Same-day appointments often available</li>
+            <li>Book up to months in advance</li>
+          </ul>
+        </div>
+        
+        <div class="policy-card">
+          <h3>💳 Payment Methods</h3>
+          <ul>
+            <li>Cash</li>
+            <li>All major credit cards accepted</li>
+            <li>Debit cards welcome</li>
+            <li>Zelle accepted</li>
+            <li>Apple Pay available</li>
+          </ul>
+        </div>
+        
+        <div class="policy-card">
+          <h3>🚗 Parking & Location</h3>
+          <ul>
+            <li>Free street parking</li>
+            <li>Handicap accessible entrance</li>
+            <li>Free parking lot parking</li>
+          </ul>
+        </div>
+
+        <div class="policy-card">
+          <h3>👥 Group Bookings</h3>
+          <ul>
+            <li>Special rates for parties of 4+</li>
+            <li>Corporate group bookings welcome</li>
+            <li>Advance booking recommended</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="container">
+      <h2>What Our Clients Say</h2>
+      <div class="google-rating" aria-label="Google rating">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <div class="rating-text">4.4/5 on Google Reviews</div>
+      </div>
+      <div class="testimonials-list">
+        <div class="testimonial">
+          <p>"Under new management and I'm glad I walked in. They play soft music, which made the environment very relaxing. The tech's Wendy and Danny were professional and the work was amazing. You can tell they love what they do. I got a simple clean style for the first time and I LOVE THEM. My pedicure was fantastic as well."</p>
+          <div class="testimonial-author">Olivia S.</div>
+          <div class="testimonial-platform">Google Review</div>
+        </div>
+        <div class="testimonial">
+          <p>"Wendy is absolutely amazing! I’ve been getting my nails done by her for a while now, and I didn’t hesitate to follow her to her new location—she’s just that good. It’s so hard to find a nail tech who is not only talented but consistent, detail-oriented, and truly cares about her clients. I’ve already referred someone to her, and they’re hooked too—Wendy gained another loyal client just like that! If you’re looking for beautiful, long-lasting nails and a relaxing experience, Wendy is the one."</p>
+          <div class="testimonial-author">Beautifully H.</div>
+          <div class="testimonial-platform">Google Review</div>
+        </div>
+        <div class="testimonial">
+          <p>"Very good work and service HIGHLY RECOMMENDED!!!"</p>
+          <div class="testimonial-author">Mar Q.</div>
+          <div class="testimonial-platform">Google Review</div>
+        </div>
+        <div class="testimonial">
+          <p>"I loved Wendy's work. She did a very good job and is very nice and sweet."</p>
+          <div class="testimonial-author">Viviana B.</div>
+          <div class="testimonial-platform">Google Review</div>
+        </div>
+        <div class="testimonial">
+          <p>"wendy is amazing !! She’s always so sweet and I love talking to her, her work is amazing I’ve never had a complain abt my nails she’s awesome at what she does !!!"</p>
+          <div class="testimonial-author">Angela</div>
+          <div class="testimonial-platform">Google Review</div>
+        </div>
+        <div class="testimonial">
+          <p>"Wendy and Denny are amazing ! Amazing service did amazing job on pedicure took there time"</p>
+          <div class="testimonial-author">Crystal H.</div>
+          <div class="testimonial-platform">Google Review</div>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="contact">
-    <h2>Contact Us</h2>
-    <p>📍 14519 7th St, Victorville, CA 92395</p>
-    <p>📞 (760) 881-3001</p>
-    <p>📧 goldnailsandspa.vv@gmail.com</p>
-    <h2>Business Hours</h2>
-    <p>🕒 Monday - Saturday: 9:30AM - 7:00PM</p>
-    <p>❌ Sunday: Closed</p>
-    <div class="map">
-      <iframe 
-        src="https://www.google.com/maps?q=14519+7th+St,+Victorville,+CA+92395&output=embed"
-        allowfullscreen=""
-        loading="lazy"
-      ></iframe>
+    <div class="container">
+      <h2>Contact & Business Hours</h2>
+      <div class="contact-info">
+        <div class="contact-card">
+          <h3>📍 Location</h3>
+          <p>14519 Seventh St<br>Victorville, CA 92395</p>
+        </div>
+        
+        <div class="contact-card">
+          <h3>📞 Contact</h3>
+          <p><a href="tel:7608813001">(760) 881-3001</a></p>
+          <p><a href="mailto:goldnailsandspa.vv@gmail.com">goldnailsandspa.vv@gmail.com</a></p>
+        </div>
+        
+        <div class="contact-card">
+          <h3>🕒 Hours</h3>
+          <p>Monday - Saturday:<br>9:30 AM - 7:00 PM</p>
+          <p>Sunday: Closed</p>
+        </div>
+        
+        <div class="contact-card">
+          <h3>💳 Payment</h3>
+          <div class="payment-methods">
+            <span class="payment-badge">💵 Cash</span>
+            <span class="payment-badge">💳 Cards</span>
+            <span class="payment-badge">📱 Apple Pay</span>
+            <span class="payment-badge">📱 Zelle</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="map">
+        <iframe 
+          src="https://www.google.com/maps?q=14519+7th+St,+Victorville,+CA+92395&output=embed" 
+          loading="lazy"
+          title="Gold Nails & Spa Location Map"
+          aria-label="Map showing location of Gold Nails & Spa at 14519 7th St, Victorville, CA 92395">
+        </iframe>
+      </div>
+
+      <form action="https://formspree.io/f/xeqyqjkw" method="POST" class="contact-form">
+        <h3>Send Us a Message</h3>
+        <label for="name" class="sr-only">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <label for="email" class="sr-only">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <label for="phone" class="sr-only">Your Phone (Optional)</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone (Optional)">
+        <label for="service" class="sr-only">Service Interested In</label>
+        <input type="text" id="service" name="service" placeholder="Service Interested In (Optional)">
+        <label for="message" class="sr-only">Your Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Gold Nails & Spa</p>
+    <p>Licensed & Insured</p>
   </footer>
+
+  <a href="https://calendly.com/goldnailsandspa-vv" target="_blank" class="book-btn" aria-label="Book appointment online">
+    📅 Book Now
+  </a>
 
   <script src="script.js"></script>
 </body>
