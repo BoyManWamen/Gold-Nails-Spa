@@ -152,20 +152,105 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Gallery item interaction
-  document.querySelectorAll('.gallery-item').forEach(item => {
-    item.addEventListener('click', () => {
-      // In a real implementation, this would open a lightbox or modal
-      alert('Photo gallery feature - would open larger image view');
-    });
-
-    item.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        item.click();
-      }
-    });
+// Gallery item interaction - FIXED VERSION
+document.querySelectorAll('.gallery-item').forEach((item, index) => {
+  item.addEventListener('click', () => {
+    openLightbox(index);
   });
+
+  item.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openLightbox(index);
+    }
+  });
+});
+
+let currentImageIndex = 0;
+
+// Get actual images from your gallery
+function getGalleryImages() {
+  const galleryItems = document.querySelectorAll('.gallery-item img');
+  return Array.from(galleryItems).map((img, index) => ({
+    src: img.src,
+    title: img.alt || `Gallery Image ${index + 1}`,
+    description: img.alt || 'Professional nail and spa services'
+  }));
+}
+
+function createLightbox() {
+  const lightbox = document.createElement('div');
+  lightbox.id = 'lightbox';
+  lightbox.innerHTML = `
+    <div class="lightbox-content">
+      <span class="lightbox-close">&times;</span>
+      <img class="lightbox-image" src="" alt="">
+      <div class="lightbox-info">
+        <h3 class="lightbox-title"></h3>
+        <p class="lightbox-description"></p>
+      </div>
+      <button class="lightbox-prev">&#8249;</button>
+      <button class="lightbox-next">&#8250;</button>
+    </div>
+  `;
+  document.body.appendChild(lightbox);
+
+  // Add event listeners
+  lightbox.querySelector('.lightbox-close').onclick = closeLightbox;
+  lightbox.querySelector('.lightbox-prev').onclick = () => navigateImage(-1);
+  lightbox.querySelector('.lightbox-next').onclick = () => navigateImage(1);
+  lightbox.onclick = (e) => { if (e.target === lightbox) closeLightbox(); };
+  
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.style.display === 'flex') {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navigateImage(-1);
+      if (e.key === 'ArrowRight') navigateImage(1);
+    }
+  });
+}
+
+function openLightbox(index) {
+  if (!document.getElementById('lightbox')) createLightbox();
+  
+  const galleryImages = getGalleryImages();
+  currentImageIndex = index;
+  const lightbox = document.getElementById('lightbox');
+  const img = lightbox.querySelector('.lightbox-image');
+  const title = lightbox.querySelector('.lightbox-title');
+  const description = lightbox.querySelector('.lightbox-description');
+  
+  img.src = galleryImages[index].src;
+  img.alt = galleryImages[index].title;
+  title.textContent = galleryImages[index].title;
+  description.textContent = galleryImages[index].description;
+  
+  lightbox.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  lightbox.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+function navigateImage(direction) {
+  const galleryImages = getGalleryImages();
+  currentImageIndex += direction;
+  if (currentImageIndex < 0) currentImageIndex = galleryImages.length - 1;
+  if (currentImageIndex >= galleryImages.length) currentImageIndex = 0;
+  
+  const lightbox = document.getElementById('lightbox');
+  const img = lightbox.querySelector('.lightbox-image');
+  const title = lightbox.querySelector('.lightbox-title');
+  const description = lightbox.querySelector('.lightbox-description');
+  
+  img.src = galleryImages[currentImageIndex].src;
+  img.alt = galleryImages[currentImageIndex].title;
+  title.textContent = galleryImages[currentImageIndex].title;
+  description.textContent = galleryImages[currentImageIndex].description;
+}
 
   // Staff member interaction
   document.querySelectorAll('.staff-member').forEach(member => {
